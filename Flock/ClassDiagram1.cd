@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Flock.Bird" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIoAAEAAIQAAAAAAgAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Bird.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flock.Boid" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="Flock.Bird" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="1.312" />
+        <Point X="5.25" Y="2.875" />
+        <Point X="7.5" Y="2.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAYAgAAAAAAQACAAQAAAAAAAggAAIAAAIAA=</HashCode>
+      <FileName>Boid.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flock.Obstacle" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Flock.Bird" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.312" />
+        <Point X="4.75" Y="2.938" />
+        <Point X="3.5" Y="2.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAgAAAAAAQAEABAAAAgAAAAAAAAAAAMAA=</HashCode>
+      <FileName>Obstacle.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flock.Game">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="LeaderBoid" Type="Flock.Boid" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="0.5" />
+        <Point X="2.688" Y="0.295" />
+        <Point X="8.75" Y="0.295" />
+        <Point X="8.75" Y="2.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="BoidList" Type="Flock.Boid" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="0.812" />
+        <Point X="3.625" Y="0.812" />
+        <Point X="3.625" Y="0.42" />
+        <Point X="7.562" Y="0.42" />
+        <Point X="7.562" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAgAIAAAAAA=</HashCode>
+      <FileName>Game.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeaderBoid" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BoidList" />
+      <Property Name="ObstacleList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Flock.Form1">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="BoidList" Type="Flock.Boid" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.441" Y="5.5" />
+        <Point X="4.441" Y="4.446" />
+        <Point X="7.5" Y="4.446" />
+        <Point X="7.5" Y="3.125" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LeaderBoid" Type="Flock.Boid" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.752" Y="5.5" />
+        <Point X="4.752" Y="5.125" />
+        <Point X="8.75" Y="5.125" />
+        <Point X="8.75" Y="3.191" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ObstacleList" Type="Flock.Obstacle" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.82" Y="5.5" />
+        <Point X="3.82" Y="3.816" />
+        <Point X="2.688" Y="3.816" />
+        <Point X="2.688" Y="3.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACRABAUgkCgQAECAgAyAIAQCRkIGgEECxC0AMAEiAQE=</HashCode>
+      <FileName>Form1.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="FormDebug" />
+      <Property Name="LeaderBoid" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BoidList" />
+      <Property Name="ObstacleList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Flock.FormDebug" Collapsed="true">
+    <Position X="6.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAAAAECAAAAAAAACAAAgCAAAQwAAAAAACAAAAAAA=</HashCode>
+      <FileName>FormDebug.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
